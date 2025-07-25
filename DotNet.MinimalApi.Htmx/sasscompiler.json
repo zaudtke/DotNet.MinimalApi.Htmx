@@ -1,0 +1,10 @@
+{
+  "GenerateScopedCss": true,
+  "ScopedCssFolders": ["Features", "Pages", "Shared", "Components"],
+  "IncludePaths": [],
+  "Configurations": {
+    "Debug": {
+      "Arguments": "--style=expanded"
+    }
+  }
+}

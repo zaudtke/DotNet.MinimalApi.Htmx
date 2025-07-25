@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet.MinimalApi.Htmx", "DotNet.MinimalApi.Htmx\DotNet.MinimalApi.Htmx.csproj", "{9956209F-E602-454B-ADAC-060AF07CAD9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{92BED16A-906A-40B4-8C50-128E76A0D23E}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		nuget.config = nuget.config
+		.gitignore = .gitignore
+		.gitattributes = .gitattributes
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{FE30895E-6E21-4792-A7A3-D3D659F19754}"
+	ProjectSection(SolutionItems) = preProject
+		.config\dotnet-tools.json = .config\dotnet-tools.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9956209F-E602-454B-ADAC-060AF07CAD9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9956209F-E602-454B-ADAC-060AF07CAD9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9956209F-E602-454B-ADAC-060AF07CAD9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9956209F-E602-454B-ADAC-060AF07CAD9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
