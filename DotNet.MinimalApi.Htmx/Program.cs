@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorComponents();
 #if DEBUG
+    // This enables the Watcher for Sass Files
     builder.Services.AddSassCompiler();
 #endif
 

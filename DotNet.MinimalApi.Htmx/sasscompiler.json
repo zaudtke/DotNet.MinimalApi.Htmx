@@ -1,4 +1,6 @@
 {
+  "Source": "wwwroot/styles",
+  "Target": "wwwroot/styles",
   "GenerateScopedCss": true,
   "ScopedCssFolders": ["Features", "Pages", "Shared", "Components"],
   "IncludePaths": [],
