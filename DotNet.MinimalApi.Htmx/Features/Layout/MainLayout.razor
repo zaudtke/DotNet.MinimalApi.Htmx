@@ -1,0 +1,36 @@
+@using DotNet.MinimalApi.Htmx.Features.Components.NavMenu
+@inherits LayoutComponentBase
+
+<!DOCTYPE html>
+<html class="h-100" lang="en-us">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        @* <meta name="htmx-config" content='{"refreshOnHistoryMiss":"true"}'/> *@
+        <base href="/"/>
+        <link rel="stylesheet" href="@Assets["lib/bootstrap/css/bootstrap.min.css"]"/>
+        <link rel="stylesheet" href="@Assets["styles/app.css"]"/>
+        <link rel="stylesheet" href="@Assets["DotNet.MinimalApi.Htmx.styles.css"]"/>
+        <script src="@Assets["lib/htmx/htmx.min.js"]"></script>
+        @* <script src="@Assets["client-error-handling.js"]"></script> *@
+        <HeadOutlet/>
+    </head>
+    <body> 
+        <div class="page">
+            <div class="sidebar">
+                <NavMenu/>
+            </div>
+
+            <main>
+                <div class="top-row px-4">
+                    <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+                </div>
+
+                <article class="content px-4">
+                    <div hx-trigger="success-alert from:body" hx-get="/success-alert"></div>
+                    @Body
+                </article>
+            </main>
+        </div>
+    </body>
+</html>

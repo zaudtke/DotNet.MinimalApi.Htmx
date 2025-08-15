@@ -12,7 +12,7 @@ public static class RouteExtensions
         var routeDefinitions = typeof(Program).Assembly
             .GetTypes()
             .Where(t => t.IsAssignableTo(typeof(IRouteDefinition))
-                        && t is { IsAbstract: false, IsInterface: true })
+                        && t is { IsAbstract: false, IsInterface: false })
             .Select(Activator.CreateInstance)
             .Cast<IRouteDefinition>();
         foreach (var routeDefinition in routeDefinitions)
