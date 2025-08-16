@@ -13,7 +13,7 @@ builder.Services.AddRazorComponents();
 
 builder.Services.Configure<LiteDbSettings>(builder.Configuration.GetSection("LiteDbOptions"));
 builder.Services.AddSingleton<LiteDbContext>();
-
+builder.Services.AddScoped<ContactService>();
 
 var app = builder.Build();
 
