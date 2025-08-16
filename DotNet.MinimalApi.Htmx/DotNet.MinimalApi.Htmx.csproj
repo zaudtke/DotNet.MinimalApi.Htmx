@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <PackageReference Include="AspNetCore.SassCompiler" />
+      <PackageReference Include="LiteDB" />
     </ItemGroup>
 
 </Project>

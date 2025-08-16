@@ -1,5 +1,4 @@
 using DotNet.MinimalApi.Htmx.Infrastructure;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace DotNet.MinimalApi.Htmx.Features.Examples.ClickToEdit;
