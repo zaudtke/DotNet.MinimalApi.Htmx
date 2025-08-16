@@ -1,4 +1,14 @@
+@using DotNet.MinimalApi.Htmx.Data
+@using DotNet.MinimalApi.Htmx.Features.Examples.ClickToEdit.Comonents
 @layout MainLayout
 
 <PageTitle>Click To Edit</PageTitle>
 <h1>Click To Edit</h1>
+
+<ViewContact Contact="@Contact" />
+
+@code{
+
+    [Parameter] public Contact Contact { get; set; } = new();
+
+}
