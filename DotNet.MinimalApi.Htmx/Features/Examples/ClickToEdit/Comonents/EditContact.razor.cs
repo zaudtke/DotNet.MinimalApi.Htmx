@@ -16,7 +16,7 @@ public partial class EditContact : IRouteDefinition
                 return new RazorComponentResult<EditContact>(new { Contact = contact });
             });
         
-        endpoints.MapPost("Examples/ClickToEdit/EditContact/{id:int}",
+        endpoints.MapPut("Examples/ClickToEdit/EditContact/{id:int}",
             async (int id, [FromForm]Contact contact, ContactService service) =>
             {
                 if (id != contact.Id)
