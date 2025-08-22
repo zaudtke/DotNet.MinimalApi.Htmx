@@ -3,7 +3,7 @@
 .navbar-toggler {
   appearance: none;
   cursor: pointer;
-  width: 3.5rem;
+  width: 3.5rem;e
   height: 2.5rem;
   color: white;
   position: absolute;
@@ -15,7 +15,6 @@
   &:checked {
     background-color: rgba(255, 255, 255, 0.5);
   }
-}
 
 .top-row {
   min-height: 3.5rem;
@@ -60,7 +59,7 @@
     padding-bottom: 1rem;
   }
 
-  ::deep .nav-link {
+  // ::deep selector for Razor components
     color: #d7d7d7;
     background: none;
     border: none;
@@ -85,8 +84,9 @@
 
 .nav-scrollable {
   display: none;
-}
 
+}
+  // Media query nesting
 .navbar-toggler:checked ~ .nav-scrollable {
   display: block;
 }
@@ -97,11 +97,9 @@
   }
 
   .nav-scrollable {
-    display: block;
     height: calc(100vh - 3.5rem);
     overflow-y: auto;
   }
 }
 
-// ...existing code...
-
+.navbar-toggler:checked ~ .nav-scrollable {

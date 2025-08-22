@@ -26,7 +26,10 @@ public partial class EditContact : IRouteDefinition
         {
             return Results.BadRequest("Contact ID mismatch.");
         }
-        _ = await service.Update(contact);
-        return new RazorComponentResult<ViewContact>(new { Contact = contact });
+        var dbContact = await service.GetById(id);
+        dbContact.Name = contact.Name;
+        dbContact.Email = contact.Email;
+        _ = await service.Update(dbContact);
+        return new RazorComponentResult<ViewContact>(new { Contact = dbContact });
     }
 }
