@@ -9,6 +9,10 @@
         <input type="text" class="form-control" id="Email" name="Email" value="@Contact.Email" />
     </div>
     <div class="form-group">
+        <label for="Active" >Active</label>
+        <input type="checkbox" class="form-check-input" id="Active" name="Active" checked="@Contact.Active" value="true" />
+    </div>
+    <div class="form-group">
         <button class="btn btn-primary" type="submit">Submit</button>&nbsp;<button class="btn btn-danger" hx-get="Examples/ClickToEdit/@Contact.Id">Cancel</button>
     </div>
     <input type="hidden" id="Id" name="Id" value="@Contact.Id"/>

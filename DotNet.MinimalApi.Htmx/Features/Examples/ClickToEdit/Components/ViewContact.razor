@@ -1,7 +1,8 @@
 @using DotNet.MinimalApi.Htmx.Data
 <div hx-target="this" hx-swap="outerHTML">
     <div class="form-group"><label style="width:5em;">Name:</label> @Contact.Name</div>
-    <div class="form-group"><label style="width:5em;">Movie:</label> @Contact.Email</div>
+    <div class="form-group"><label style="width:5em;">Email:</label> @Contact.Email</div>
+    <div class="form-group"><label style="width:5em;">Active:</label> @Contact.Active</div>
     <div>
         <button hx-get="Examples/ClickToEdit/EditContact/@Contact.Id" class="btn btn-primary">Edit</button>
     </div>
