@@ -1,0 +1,32 @@
+@using DotNet.MinimalApi.Htmx.Data
+@using DotNet.MinimalApi.Htmx.Features.Examples.ClickToLoad.Components
+@layout MainLayout
+
+
+<PageTitle>Click to Load</PageTitle>
+<h1>Click to Load</h1>
+
+<div>
+    <table>
+       <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ContactRows Contacts="@Contacts" LoadMoreUrl="@LoadMoreUrl" />
+        </tbody>
+    </table>
+    
+</div>
+
+@code {
+
+    [Parameter] 
+    public IEnumerable<Contact> Contacts { get; set; } = new List<Contact>();
+
+    [Parameter]
+    public string? LoadMoreUrl { get; set; }
+}

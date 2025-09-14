@@ -1,0 +1,39 @@
+@using DotNet.MinimalApi.Htmx.Data
+
+@foreach (var contact in Contacts)
+{
+    <tr>
+        <td>@contact.Name</td>
+        <td>@contact.Email</td>
+        <td>@contact.Active</td>
+    </tr>
+}
+@if (!string.IsNullOrEmpty(LoadMoreUrl))
+{
+    <tr id="lastRow">
+        <td colspan="3">
+            <button class="btn btn-primary"
+                hx-get="@LoadMoreUrl"
+                hx-target="#lastRow"
+                hx-swap="outerHTML">
+                Load More
+            </button>
+        </td>
+    </tr>
+}
+else
+{
+    <tr>
+        <td colspan="3">
+            No More Villains
+        </td>
+    </tr>
+}
+
+@code {
+    [Parameter] 
+    public IEnumerable<Contact> Contacts { get; set; } = new List<Contact>();
+
+    [Parameter]
+    public string? LoadMoreUrl { get; set; } = null!;
+}
