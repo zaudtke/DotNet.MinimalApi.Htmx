@@ -1,0 +1,10 @@
+#toast {
+  background: #E1F0DA;
+  opacity: 0;
+  transition: opacity 3s ease-out;
+  margin-left: 1em;
+  padding: .25em;
+  &.htmx-settling {
+    opacity: 100;
+  }
+}

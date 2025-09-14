@@ -1,0 +1,48 @@
+@using DotNet.MinimalApi.Htmx.Data
+@layout MainLayout
+
+<PageTitle>Bulk Edit</PageTitle>
+<h1>Bulk Edit</h1>
+
+<div>
+    <form id="checked-contacts"
+          hx-post="Examples/BulkUpdate"
+          hx-swap="innerHTML settle:3s"
+          hx-target="#toast">
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Active</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach(var contact in Contacts)
+            {
+                <tr>
+                    <td>
+                        <span>@contact.Name</span>
+                    </td>
+                    <td>    
+                        <span>@contact.Email</span>
+                    </td>
+                    <td>
+                        <input type="checkbox" class="form-check-input" id="Active" name="SelectedIds" checked="@contact.Active" value="@contact.Id" />
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <HtmxAntiforgeryToken />
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <output id="toast"></output>
+    </form>
+    
+    
+</div>
+
+@code {
+
+    [Parameter] public IEnumerable<Contact> Contacts { get; set; } = [];
+}

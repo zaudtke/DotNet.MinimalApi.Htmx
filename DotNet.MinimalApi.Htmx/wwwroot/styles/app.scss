@@ -79,3 +79,12 @@ h1:focus {
     display: block;
   }
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+} 
+th, td {
+  border-bottom: 1px solid #eee;
+  padding: .2em;
+}

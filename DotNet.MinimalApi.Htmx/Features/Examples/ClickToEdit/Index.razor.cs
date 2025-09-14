@@ -2,7 +2,6 @@ using DotNet.MinimalApi.Htmx.Data;
 using DotNet.MinimalApi.Htmx.Features.Examples.ClickToEdit.Components;
 using DotNet.MinimalApi.Htmx.Infrastructure;
 using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet.MinimalApi.Htmx.Features.Examples.ClickToEdit;
 
